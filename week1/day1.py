@@ -73,3 +73,10 @@ elif guests <= 200:
 else:
     price = 20000
 print(f"The cost for {guests} guests is ${price}.")
+
+
+
+
+
+
+
