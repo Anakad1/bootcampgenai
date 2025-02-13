@@ -46,3 +46,58 @@ if davids_dog.height > sarahs_dog.height:
     print(f"\nLe plus grand chien est {davids_dog.name}.")
 else:
     print(f"\nLe plus grand chien est {sarahs_dog.name}.")
+
+
+#exercice 3 
+class Song:
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+#création d'un objet Song avec les paroles
+stairway = Song([
+    "There’s a lady who's sure",
+    "all that glitters is gold",
+    "and she’s buying a stairway to heaven"
+])
+
+#affichage des paroles
+stairway.sing_me_a_song()
+
+
+
+#DAILY CHALLENGE 
+class Farm:
+    def __init__(self, name):
+        self.name = name
+        self.animals = {}
+
+    def add_animal(self, animal, count=1):
+        if animal in self.animals:
+            self.animals[animal] += count
+        else:
+            self.animals[animal] = count
+
+    def get_info(self):
+        result = f"{self.name}'s farm\n\n"
+        
+        for animal, count in self.animals.items():
+            result += f"{animal} : {count}\n"
+
+        result += "\n    E-I-E-I-0!\n"
+        return result
+
+#Création de la ferme
+macdonald = Farm("McDonald")
+
+#AjoutER des animaux
+macdonald.add_animal('cow', 5)
+macdonald.add_animal('sheep')
+macdonald.add_animal('sheep')
+macdonald.add_animal('goat', 12)
+
+#Aficher des informations de la ferme
+print(macdonald.get_info())
