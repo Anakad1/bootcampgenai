@@ -19,6 +19,9 @@ class Farm:
         result += "\n    E-I-E-I-0!\n"
         return result
 
+
+
+
 #Création de la ferme
 macdonald = Farm("McDonald")
 
